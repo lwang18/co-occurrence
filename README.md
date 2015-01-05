@@ -7,7 +7,7 @@ Pulling data from MGRAST
 ===========
 
 First, we pulled data from [MGRAST](http://metagenomics.anl.gov/), using the script, [_pulling_data_from_MGRAST_with_matR.R](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/pulling_data_from_MGRAST_with_matR.R)
-   this is code   
+	this is code   
 
 pulling_data_from_MGRAST_with_matR.R|
 --------------------------------------
