@@ -6,12 +6,18 @@ These are R scripts used to perform co-occurrence analysis following the paper, 
 Pulling data from MGRAST
 ===========
 
-First, we pulled data from [MGRAST] (http://metagenomics.anl.gov/).
+First, we pulled data from [MGRAST](http://metagenomics.anl.gov/), using the script, [_pulling_data_from_MGRAST_with_matR.R](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/pulling_data_from_MGRAST_with_matR.R)
+
+If you would like to use your own data, skip down to 
+* :ref:`in-pairwise`
 pulling_data_from_MGRAST_with_matR.R|
 --------------------------------------
 
 This script uses matR to pull data from MGRAST for use in the co-occurrence analyses.  The three datasets can be pulled seperately or together in a single dataframe (I recommned pulling all together to avoid issues with differences in richness within each dataset).
 
+
+
+.. _in-pairwise:
 |pairwise_co-occurrence.R|
 --------------------------
 
