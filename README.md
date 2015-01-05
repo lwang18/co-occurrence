@@ -1,9 +1,8 @@
 co-occurrence
 =============
 
-R scripts for performing co-occurrence analyses
-
-|pulling_data_from_MGRAST_with_matR.R|
+These are R scripts used to perform co-occurrence analysis following the paper, [Demonstrating microbial co-occurrence pattern analyses within and between ecosystems](http://journal.frontiersin.org/Journal/10.3389/fmicb.2014.00358/full)
+pulling_data_from_MGRAST_with_matR.R|
 --------------------------------------
 
 This script uses matR to pull data from MGRAST for use in the co-occurrence analyses.  The three datasets can be pulled seperately or together in a single dataframe (I recommned pulling all together to avoid issues with differences in richness within each dataset).
