@@ -7,9 +7,8 @@ Pulling data from MGRAST
 ===========
 
 First, we pulled data from [MGRAST](http://metagenomics.anl.gov/), using the script, [_pulling_data_from_MGRAST_with_matR.R](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/pulling_data_from_MGRAST_with_matR.R)
+   this is code   
 
-If you would like to use your own data, skip down to 
-* :ref:`in-pairwise`
 pulling_data_from_MGRAST_with_matR.R|
 --------------------------------------
 
@@ -17,7 +16,7 @@ This script uses matR to pull data from MGRAST for use in the co-occurrence anal
 
 
 
-.. _in-pairwise:
+
 |pairwise_co-occurrence.R|
 --------------------------
 
