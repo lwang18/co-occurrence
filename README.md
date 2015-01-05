@@ -1,4 +1,4 @@
-co-occurrence
+A Walkthrough of Co-occurrence Analyses
 =============
 
 These are R scripts used to perform co-occurrence analysis following the paper, [Demonstrating microbial co-occurrence pattern analyses within and between ecosystems](http://journal.frontiersin.org/Journal/10.3389/fmicb.2014.00358/full)
