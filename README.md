@@ -24,4 +24,4 @@ This script contains the code for running the PERMANOVA that tests for differenc
 This is a script that contains a permutation test based on the F-statistic.  This is a function that can be sourced into other scripts for use.  Original credit goes to Dr. Dean Adams who wrote the code for the test, while I wrapped it in a function.
 
 
-[This is md practice](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/practice.md)
+[This is md practice](http://co-occurrence.readthedocs.org/en/latest/practice/)
