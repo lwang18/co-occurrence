@@ -14,13 +14,16 @@ This script uses APIs to pull 16S rRNA amplicon datasets from the MGRAST databas
 When pulling data from MGRAST, you are required to have an authentication key that can be received after registering with the database.  The authentication 
 key then goes between the ``""`` in the ``msession$setAuth("")`` command within the script.    
 
-pulling_data_from_MGRAST_with_matR.R|
---------------------------------------
+If problems occur when trying to pull data from MGRAST, or if you wish to skip this step, .csv's of the data can be downloaded here:
+[Data summarized by bacterial order](https://github.com/ryanjw/co-occurrence/blob/master/data/total_order_info.csv)
+[Data summarized by bacterial family](https://github.com/ryanjw/co-occurrence/blob/master/data/total_family_info.csv)
 
-This script uses matR to pull data from MGRAST for use in the co-occurrence analyses.  The three datasets can be pulled seperately or together in a single dataframe (I recommned pulling all together to avoid issues with differences in richness within each dataset).
+The data tables are organized as the following:
 
-
-
+reads|MGRASTid|trt|rep|order 1|order 2|order 3|...
+--------------------------------------------------
+1000|mgm1234567.89|soil|forest|3|0|50|...
+1500|mgm1234567.10|soil|desert|10|1|0|...
 
 |pairwise_co-occurrence.R|
 --------------------------
