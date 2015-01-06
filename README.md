@@ -14,7 +14,7 @@ This script uses APIs to pull 16S rRNA amplicon datasets from the MGRAST databas
 When pulling data from MGRAST, you are required to have an authentication key that can be received after registering with the database.  The authentication 
 key then goes between the ``""`` in the ``msession$setAuth("")`` command within the script.    
 
-If problems occur when trying to pull data from MGRAST, or if you wish to skip this step, .csv's of the data can be downloaded here:
+If problems occur when trying to pull data from MGRAST, or if you wish to skip this step, .csv's of the data can be downloaded here:  
 [Data summarized by bacterial order](https://github.com/ryanjw/co-occurrence/blob/master/data/total_order_info.csv)  
 [Data summarized by bacterial family](https://github.com/ryanjw/co-occurrence/blob/master/data/total_family_info.csv)
 
@@ -25,10 +25,20 @@ The data tables are organized as the following:
 |1000 |mgm1234567.89  |soil |forest |3|0|50|... |
 |1500 |mgm1234567.10  |soil |desert |10|1|0|... |
   
-Once the data has been pulled into R using 'read.csv()', the co-occurrence analysis can begin.
 
-This script performs the correlations between all pairs of microbes in the dataset.  Attention needs to be paid to where the loop starts (it should start at the first column containing abundance data, not any metadata related to samples).
+Once the data has been pulled into R using `read.csv()`, the co-occurrence analysis can begin.
 
+Performing the Analysis
+=======================
+
+The script, [co_occurrence_pairwise_routine.R](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/co_occurrence_pairwise_routine.R),
+is used to perform co-occurrence analysis based on the organization of the data listed above.  It can be customized to work for any dataset where samples are rows
+and colummns are sample information (which needs to be considered when creating iterators for `for` loops) along with abundance of each OTU.  In short, this script uses
+nested for loops to perform pairwise correlations between each column in the dataset.  Here, a Spearman's correlation is used to avoid data transformation issues that can 
+occur with these types of data.  The product of the script is a data frame called 'results' that lists the trt (i.e. the environment that the samples originate from),
+the pair of OTUs, correlation coefficient, P value for statistical test, and the abundances of the OTUs.
+
+MGRAST does also include some Eukaryotic taxa that are not part of the analysis here.  They are removed in the script as well.    
 |co-occurrence_permanova_sim.R|
 -------------------------------
 
