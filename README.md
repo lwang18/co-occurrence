@@ -20,10 +20,10 @@ If problems occur when trying to pull data from MGRAST, or if you wish to skip t
 
 The data tables are organized as the following:
 
-reads|MGRASTid|trt|rep|order 1|order 2|order 3|...
---------------------------------------------------
-1000|mgm1234567.89|soil|forest|3|0|50|...
-1500|mgm1234567.10|soil|desert|10|1|0|...
+|reads|MGRASTid|trt|rep|order 1|order 2|order 3|...|
+|:----|:-------|:--|:--|:------|:------|:------|:--|
+|1000 |mgm1234567.89|soil|forest|3|0|50|...|
+|1500 |mgm1234567.10|soil|desert|10|1|0|...|
 
 |pairwise_co-occurrence.R|
 --------------------------
