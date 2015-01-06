@@ -15,18 +15,17 @@ When pulling data from MGRAST, you are required to have an authentication key th
 key then goes between the ``""`` in the ``msession$setAuth("")`` command within the script.    
 
 If problems occur when trying to pull data from MGRAST, or if you wish to skip this step, .csv's of the data can be downloaded here:
-[Data summarized by bacterial order](https://github.com/ryanjw/co-occurrence/blob/master/data/total_order_info.csv)
+[Data summarized by bacterial order](https://github.com/ryanjw/co-occurrence/blob/master/data/total_order_info.csv)  
 [Data summarized by bacterial family](https://github.com/ryanjw/co-occurrence/blob/master/data/total_family_info.csv)
 
 The data tables are organized as the following:
 
 |reads |MGRASTid |trt |rep |order 1 |order 2 |order 3 |... |
 |:-----|:--------|:---|:---|:-------|:-------|:-------|:---|
-|1000 |mgm1234567.89 |soil |forest |3 |0 |50 |... |
-|1500 |mgm1234567.10 |soil |desert |10 |1 |0 |... |
-
-|pairwise_co-occurrence.R|
---------------------------
+|1000 |mgm1234567.89  |soil |forest |3|0|50|... |
+|1500 |mgm1234567.10  |soil |desert |10|1|0|... |
+  
+Once the data has been pulled into R using 'read.csv()', the co-occurrence analysis can begin.
 
 This script performs the correlations between all pairs of microbes in the dataset.  Attention needs to be paid to where the loop starts (it should start at the first column containing abundance data, not any metadata related to samples).
 
