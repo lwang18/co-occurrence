@@ -10,8 +10,9 @@ Pulling data from MGRAST
 First, we pulled data from [MGRAST](http://metagenomics.anl.gov/) using the script
  [_pulling_data_from_MGRAST_with_matR.R](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/pulling_data_from_MGRAST_with_matR.R).  
 This script uses APIs to pull 16S rRNA amplicon datasets from the MGRAST database. See the paper link above for a full description of data used here.  
+
 When pulling data from MGRAST, you are required to have an authentication key that can be received after registering with the database.  The authentication 
-key then goes between the `""` in the `msession$setAuth("")` command within the script.    
+key then goes between the ``""`` in the ``msession$setAuth("")`` command within the script.    
 
 pulling_data_from_MGRAST_with_matR.R|
 --------------------------------------
