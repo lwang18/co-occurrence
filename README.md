@@ -1,13 +1,17 @@
 A Walkthrough of Co-occurrence Analyses
 =============
 
-These are R scripts used to perform co-occurrence analysis following the paper, [Demonstrating microbial co-occurrence pattern analyses within and between ecosystems](http://journal.frontiersin.org/Journal/10.3389/fmicb.2014.00358/full)
+These are R scripts used to perform co-occurrence analysis following the paper,
+ [Demonstrating microbial co-occurrence pattern analyses within and between ecosystems](http://journal.frontiersin.org/Journal/10.3389/fmicb.2014.00358/full)
 
 Pulling data from MGRAST
 ===========
 
-First, we pulled data from [MGRAST](http://metagenomics.anl.gov/), using the script, [_pulling_data_from_MGRAST_with_matR.R](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/pulling_data_from_MGRAST_with_matR.R)
-	this is code   
+First, we pulled data from [MGRAST](http://metagenomics.anl.gov/) using the script
+ [_pulling_data_from_MGRAST_with_matR.R](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/pulling_data_from_MGRAST_with_matR.R).  
+This script uses APIs to pull 16S rRNA amplicon datasets from the MGRAST database. See the paper link above for a full description of data used here.  
+When pulling data from MGRAST, you are required to have an authentication key that can be received after registering with the database.  The authentication 
+key then goes between the `""` in the `msession$setAuth("")` command within the script.    
 
 pulling_data_from_MGRAST_with_matR.R|
 --------------------------------------
