@@ -2,7 +2,7 @@ A Walkthrough of Co-occurrence Analyses
 =============
 
 These are R scripts used to perform co-occurrence analysis following the paper,
- [Demonstrating microbial co-occurrence pattern analyses within and between ecosystems](http://journal.frontiersin.org/Journal/10.3389/fmicb.2014.00358/full)
+ [Demonstrating microbial co-occurrence pattern analyses within and between ecosystems](http://journal.frontiersin.org/Journal/10.3389/fmicb.2014.00358/full).
 
 Pulling data from MGRAST
 ===========
@@ -33,16 +33,29 @@ Performing the Analysis
 
 The script, [co_occurrence_pairwise_routine.R](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/co_occurrence_pairwise_routine.R),
 is used to perform co-occurrence analysis based on the organization of the data listed above.  It can be customized to work for any dataset where samples are rows
-and colummns are sample information (which needs to be considered when creating iterators for `for` loops) along with abundance of each OTU.  In short, this script uses
-nested for loops to perform pairwise correlations between each column in the dataset.  Here, a Spearman's correlation is used to avoid data transformation issues that can 
+and colummns are sample information (which needs to be considered when creating iterators for `for` loops) along with abundance of each OTU.  
+
+In short, this script uses nested for loops to perform pairwise correlations between each column in the dataset.  Here, a Spearman's correlation is used to avoid data transformation issues that can 
 occur with these types of data.  The product of the script is a data frame called 'results' that lists the trt (i.e. the environment that the samples originate from),
 the pair of OTUs, correlation coefficient, P value for statistical test, and the abundances of the OTUs.
 
 MGRAST does also include some Eukaryotic taxa that are not part of the analysis here.  They are removed in the script as well.    
-|co-occurrence_permanova_sim.R|
--------------------------------
 
-This script contains the code for running the PERMANOVA that tests for differences in community co-occurrence between ecosystems.  At the beginnning of the script there is a simulation that shows how different pairs of correlated variables (i.e. co-occurring taxa) between two datasets (i.e. ecosystems) can affect the results of the test. 
+Testing for Differences in Network Topology
+==========================================
+
+One analysis that can be performed is a test to see if networks have different structures (i.e. topology).  The rationale behind this analysis is the following;
+If you assume that two networks have equivalent sets of nodes (microbial taxa) you can test to see if the edges between nodes (correlation from co-occurrence analysis) from 
+the two networks are different in a multivariate framework.  Using a permutational multivariate analysis of variance (PERMANOVA), we can use permutations of edges from one network 
+are different from another.  The beginning portion of the script [co-occurrence_permanova_sim.R] (https://raw.githubusercontent.com/ryanjw/co-occurrence/master/co-occurrence_permanova_sim.R)
+
+
+
+
+
+
+
+This script contains the code for running the PERMANOVA that tests for differences in community co-occurrence between ecosystems.  At the beginnning of the script there is a si
 
 |permutation_test.R|
 --------------------
