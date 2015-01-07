@@ -37,6 +37,8 @@ In short, this script uses nested for loops to perform pairwise correlations bet
 
 MGRAST does also include some Eukaryotic taxa that are not part of the analysis here.  They are removed in the script as well.    
 
+A quicker way to perform this analysis uses the function in the script, [edgelist_creation.R](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/edgelist_creation.R).  This script uses a function called `co_occur_pairs()` that can be used on the datasets.  This function works returns a data frame with no correlation values but is grouped by the correlation cut-off that has been predetermined in the script.
+
 Testing for Differences in Network Topology
 ==========================================
 
