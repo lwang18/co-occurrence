@@ -6,6 +6,28 @@ These are R scripts used to perform co-occurrence analysis following the paper,
 
 Pulling data from MGRAST
 ===========
+# diversity of each sample
+QQQQ<-plot_richness(phylo, x = "sample",color = "location",
+                    measures=c("Observed"), nrow=1) +geom_boxplot()  + 
+  #ggtitle("Shannon's index") +
+  scale_color_manual(values = c("cornflowerblue", viridis::viridis(3)))+
+  ggtitle("Before rarefaction - 16S") 
+
+
+WWWW<-plot_richness(phylo_rarefy, x = "sample",color = "location",
+                    measures=c("shannon"), nrow=1) +geom_boxplot()  + 
+  #ggtitle("Shannon's index") +
+  scale_color_manual(values = c("cornflowerblue", viridis::viridis(6)))+
+  ggtitle("After rarefaction") 
+
+grid.arrange(QQQQ,  WWWW, nrow=2)
+
+
+###################################################################################＃
+# Compare before & after rarefaction
+
+
+
 
 First, we pulled data from [MGRAST](http://metagenomics.anl.gov/) using the script
  [pulling_data_from_MGRAST_with_matR.R](https://raw.githubusercontent.com/ryanjw/co-occurrence/master/pulling_data_from_MGRAST_with_matR.R).  
