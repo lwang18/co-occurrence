@@ -6,6 +6,7 @@ These are R scripts used to perform co-occurrence analysis following the paper,
 
 Pulling data from MGRAST
 ===========
+```
 # diversity of each sample
 QQQQ<-plot_richness(phylo, x = "sample",color = "location",
                     measures=c("Observed"), nrow=1) +geom_boxplot()  + 
@@ -22,7 +23,7 @@ WWWW<-plot_richness(phylo_rarefy, x = "sample",color = "location",
 
 grid.arrange(QQQQ,  WWWW, nrow=2)
 
-
+```
 ###################################################################################＃
 # Compare before & after rarefaction
 
